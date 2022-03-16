@@ -31,7 +31,7 @@ function LineBreak()
 end
 
 function Emph(s)
-  return "[em]" .. s .. "[/em]"
+  return "[i]" .. s .. "[/i]"
 end
 
 function Strong(s)
