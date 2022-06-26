@@ -194,6 +194,9 @@ function RawBlock(format, str)
 end
 
 function Span(s, attr)
+  if (attr['class'] == 'line-through') then
+    return '[del]' .. s .. '[/del]'
+  end
   return s
 end
 
