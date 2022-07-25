@@ -99,7 +99,7 @@ function Header(lev, s, attr)
 end
 
 function BlockQuote(s)
-  return "[quote]\n" .. s .. "\n[/quote]"
+  return "[quote]" .. s .. "[/quote]"
 end
 
 function HorizontalRule()
@@ -115,7 +115,7 @@ function BulletList(items)
   for _, item in ipairs(items) do
     table.insert(buffer, "[*]" .. item)
   end
-  return "[list]\n" .. table.concat(buffer, "\n") .. "\n[/list]"
+  return "[list]" .. table.concat(buffer, "\n") .. "[/list]"
 end
 
 function OrderedList(items)
@@ -123,7 +123,7 @@ function OrderedList(items)
   for _, item in ipairs(items) do
     table.insert(buffer, "[*]" .. item)
   end
-  return "[list=1]\n" .. table.concat(buffer, "\n") .. "\n[/list]"
+  return "[list=1]" .. table.concat(buffer, "\n") .. "[/list]"
 end
 
 -- Revisit association list STackValue instance.
